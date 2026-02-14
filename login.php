@@ -4,7 +4,7 @@ include("db.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = $_POST['passwd'];
 
     // ❌ VULNERABLE QUERY (SQL Injection)
     $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2>Login</h2>
     <form method="POST" onsubmit="return validateLogin()">
         <input type="text" name="username" id="username" placeholder="Username"><br>
-        <input type="password" name="password" id="password" placeholder="Password"><br>
+        <input type="passwd" name="passwd" id="passwd" placeholder="Password"><br>
         <button type="submit">Login</button>
     </form>
 </body>
