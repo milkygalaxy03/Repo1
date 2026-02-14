@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="assets/script.js"></script>
 </head>
 <body>
-    <h2>Login Form</h2>
+    <h2>Login</h2>
     <form method="POST" onsubmit="return validateLogin()">
         <input type="text" name="username" id="username" placeholder="Username"><br>
         <input type="password" name="password" id="password" placeholder="Password"><br>
